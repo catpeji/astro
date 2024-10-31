@@ -1,0 +1,41 @@
+---
+import Social from "./Social.astro";
+const platform = "github";
+const username = "catpeji";
+const socials = [
+  {
+    platform: 'instagram',
+    trail: 'com',
+    username: 'catsupcat'
+  },
+  {
+    platform: 'tiktok',
+    trail: 'com',
+    username: '@lycoris.kurumi'
+  },
+  {
+    platform: 'twitch',
+    trail: 'tv',
+    username: 'catsupcat'
+  },
+  {
+    platform: 'youtube',
+    trail: 'com',
+    username: '@catsupcat_ttv'
+  }
+];
+---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+    <Social platform={platform} trail={'com'} username={username} />
+      {socials.map((social) => 
+        <Social platform={social.platform} trail={social.trail} username={social.username} />
+    )}
+</footer>
